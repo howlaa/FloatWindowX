@@ -1,4 +1,4 @@
-# FloatTest
+# FloatWindowX
 Android float library
 Based on floatwindow, and fixed some problems, adding automatic hiding, drag and drop deletion, automatic adaptation, horizontal and vertical screen conversion and so on.
 
@@ -16,7 +16,7 @@ Step 1. Add the JitPack repository to your build file
   Step 2. Add the dependency
  
   
-  ` dependencies {implementation 'com.github.howlaa:FloatTest:1.0'}` 
+  ` dependencies {implementation 'com.github.howlaa:FloatWindowX:1.0'}` 
 	
   
   二: use
