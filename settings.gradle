@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url "http://2e91k59982.xicp.fun/nexus/repository/maven-releases/"
+            allowInsecureProtocol = true
+        }
+        maven {
+            url "http://2e91k59982.xicp.fun/nexus/repository/maven-snapshots/"
+            allowInsecureProtocol = true
+        }
+    }
+}
+rootProject.name = "FloatTest"
+include ':app'
+include ':floatwindow'

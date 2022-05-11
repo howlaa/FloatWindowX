@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="remove_ball_bottom_margin">200dp</dimen>
+</resources>

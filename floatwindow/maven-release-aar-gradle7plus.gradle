@@ -1,0 +1,43 @@
+//1.maven-plugin
+apply plugin: 'maven-publish'
+
+//2.maven-msg
+ext {// ext is a gradle closure allowing the declaration of global properties
+    PUBLISH_GROUP_ID = 'com.coocent.tools'
+    PUBLISH_ARTIFACT_ID = 'float-window'
+    PUBLISH_VERSION = android.defaultConfig.versionName
+
+    PUBLISH_URL_RELEASE = "http://192.168.8.41:8092/nexus/repository/maven-releases/"
+    PUBLISH_URL_SNAPSHOT = "http://192.168.8.41:8092/nexus/repository/maven-snapshots/"
+}
+
+//3.maven-upload-remote-path
+project.afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = PUBLISH_GROUP_ID
+                artifactId = PUBLISH_ARTIFACT_ID
+                version = PUBLISH_VERSION
+            }
+        }
+        repositories {
+            maven {
+                name = "nexus"
+                allowInsecureProtocol true
+                url = PUBLISH_VERSION.endsWith('SNAPSHOT') ? PUBLISH_URL_SNAPSHOT : PUBLISH_URL_RELEASE
+
+                credentials {
+                    username("coocent-android")
+                    password("kuxun328")
+                }
+            }
+        }
+
+    }
+}
