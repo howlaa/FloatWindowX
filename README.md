@@ -1,7 +1,8 @@
 # FloatTest
-一：depenency
 Android float library
 Based on floatwindow, and fixed some problems, adding automatic hiding, drag and drop deletion, automatic adaptation, horizontal and vertical screen conversion and so on.
+
+一：depenency
 
 Step 1. Add the JitPack repository to your build file
 
