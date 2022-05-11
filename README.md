@@ -13,10 +13,10 @@ Step 1. Add the JitPack repository to your build file
 	}
   
   Step 2. Add the dependency
+ 
   
-  dependencies {
-	        implementation 'com.github.howlaa:FloatTest:1.0'
-	}
+  ` dependencies {implementation 'com.github.howlaa:FloatTest:1.0'}` 
+	
   
   二: use
   1.your mainfest:
@@ -24,6 +24,7 @@ Step 1. Add the JitPack repository to your build file
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     
   2.in your activity:
+  
   ```
   private fun floatBasic(){
         val iv = ImageView(this)
