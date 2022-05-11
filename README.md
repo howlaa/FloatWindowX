@@ -13,15 +13,19 @@ Step 1. Add the JitPack repository to your build file
 	}
   
   Step 2. Add the dependency
+  
   dependencies {
 	        implementation 'com.github.howlaa:FloatTest:1.0'
 	}
   
   二: use
   1.your mainfest:
+  
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    
   2.in your activity:
- private fun floatBasic(){
+  ```
+  private fun floatBasic(){
         val iv = ImageView(this)
         iv.setImageResource(R.mipmap.ic_launcher)
         FloatWindow.with(context.applicationContext)
@@ -65,3 +69,6 @@ Step 1. Add the JitPack repository to your build file
             .build()
         FloatWindow.get(FLOAT_TAG)?.show()
     }
+  
+  ```
+ 
